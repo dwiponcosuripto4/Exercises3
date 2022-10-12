@@ -16,7 +16,7 @@ namespace Exercises3
                 if (n <= 98)
                     break;
                 else
-                    Console.WriteLine("\nArray dapat mempunyai maksimal 1890 elemen. \n");
+                    Console.WriteLine("\nArray dapat mempunyai maksimal 98 elemen. \n");
             }
             Console.WriteLine("");
             Console.WriteLine("----------------------");
@@ -47,12 +47,13 @@ namespace Exercises3
             for (int i = 1; i < n; i++)
             {
                 for (int ds = n-2; ds < n - i; ds++)
+                //repeat steps 2 and 3 varying j from 0 to n-2
                 {
                     if (a[ds] > a[n - 1])
                     {
                         int temp;
                         temp = a[ds];
-                        a[ds] = a[n - 1];
+                        a[ds] = a[n - 1]; //arr[j] to arr[n-1]
                         a[n - 1] = temp;
                     }
                 }
